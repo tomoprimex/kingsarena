@@ -1,0 +1,22 @@
+/* The sidebar is position: fixed (out of flow), so this is a plain block
+   container - not flex - and the content offset lives on .main only. */
+.layout {
+  min-height: 100vh;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.main {
+  margin-left: 260px;
+  padding: 28px 24px 48px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1023px) {
+  .main {
+    margin-left: 0;
+    /* Top padding clears the fixed hamburger (top 14px + 40px button). */
+    padding: 68px 16px 40px;
+  }
+}

@@ -1,13 +1,13 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary-bg: #050805;
+  --secondary-bg: #0B1F14;
+  --primary-green: #16A34A;
+  --accent-green: #4ADE80;
+  --primary-text: #F5F5F5;
+  --muted-text: #8A948D;
+  --border-color: #1A2B20;
+  --background: var(--primary-bg);
+  --foreground: var(--primary-text);
 }
 
 html {
@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

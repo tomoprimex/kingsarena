@@ -1,0 +1,715 @@
+.page {
+  /* Page styling handled by AuthenticatedLayout */
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.welcomeSection {
+  margin-bottom: 16px;
+}
+
+.welcomeTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.welcomeSubtitle {
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.notice {
+  margin-bottom: 12px;
+}
+
+.actionError {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+.muted {
+  color: var(--muted-text);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.statsOverview,
+.organizedSection,
+.registrationsSection,
+.fixturesSection {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.statsCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.statCard {
+  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.statValue {
+  display: block;
+  font-size: 24px;
+  font-weight:  800;
+  color: var(--primary-green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.cardList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  background: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.cardTitle:hover {
+  color: var(--accent-green);
+}
+
+.cardMeta {
+  font-size: 11px;
+  color: var(--muted-text);
+  line-height: 1.3;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--border-color);
+  color: var(--primary-text);
+}
+
+.badgeUpcoming {
+  background: #f59e0b;
+  color: #050805;
+}
+
+.badgeRegistration {
+  background: #3b82f6;
+  color: #050805;
+}
+
+.badgeOngoing {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.badgeCompleted {
+  background: var(--primary-green);
+  color: #050805;
+}
+
+.badgeCancelled {
+  background: #6b7280;
+  color: #ffffff;
+}
+
+.leaveBtn {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #ef4444;
+  border-radius: 6px;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.leaveBtn:hover:not(:disabled) {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.leaveBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.linkBtn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--primary-green);
+  color: var(--primary-bg);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.linkBtn:hover {
+  background: var(--accent-green);
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .welcomeSection {
+    margin-bottom: 20px;
+  }
+
+  .welcomeTitle {
+    font-size: 22px;
+  }
+
+  .welcomeSubtitle {
+    font-size: 14px;
+  }
+
+  .statsOverview,
+  .organizedSection,
+  .registrationsSection,
+  .fixturesSection {
+    padding: 18px;
+  }
+
+  .sectionTitle {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .statsCards {
+    gap: 12px;
+  }
+
+  .statCard {
+    padding: 18px;
+  }
+
+  .statValue {
+    font-size: 26px;
+  }
+
+  .cardList {
+    gap: 12px;
+  }
+
+  .cardItem {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .cardTitle {
+    font-size: 14.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .welcomeSection {
+    margin-bottom: 32px;
+  }
+
+  .welcomeTitle {
+    font-size: 28px;
+  }
+
+  .welcomeSubtitle {
+    font-size: 16px;
+  }
+
+  .dashboardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .statsOverview,
+  .organizedSection,
+  .registrationsSection,
+  .fixturesSection {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .statsCards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .statCard {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .statValue {
+    font-size: 32px;
+  }
+
+  .cardList {
+    gap: 12px;
+  }
+
+  .cardItem {
+    padding: 16px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .cardTitle {
+    font-size: 15px;
+  }
+
+  .cardMeta {
+    font-size: 12px;
+  }
+
+  .badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .leaveBtn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .linkBtn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+.welcomeSection {
+  margin-bottom: 16px;
+}
+
+.welcomeTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.welcomeSubtitle {
+  color: var(--muted-text);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.notice {
+  margin-bottom: 12px;
+}
+
+.actionError {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+.muted {
+  color: var(--muted-text);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.statsOverview,
+.organizedSection,
+.registrationsSection,
+.fixturesSection {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.statsCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.statCard {
+  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.statValue {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-green);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--muted-text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.cardList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px;
+  background: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.cardTitle:hover {
+  color: var(--accent-green);
+}
+
+.cardMeta {
+  font-size: 11px;
+  color: var(--muted-text);
+  line-height: 1.3;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--border-color);
+  color: var(--primary-text);
+}
+
+.badgeUpcoming {
+  background: #f59e0b;
+  color: #050805;
+}
+
+.badgeRegistration {
+  background: #3b82f6;
+  color: #050805;
+}
+
+.badgeOngoing {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.badgeCompleted {
+  background: var(--primary-green);
+  color: #050805;
+}
+
+.badgeCancelled {
+  background: #6b7280;
+  color: #ffffff;
+}
+
+.leaveBtn {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #ef4444;
+  border-radius: 6px;
+  color: #ef4444;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.leaveBtn:hover:not(:disabled) {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.leaveBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.linkBtn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--primary-green);
+  color: var(--primary-bg);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.linkBtn:hover {
+  background: var(--accent-green);
+}
+
+@media (min-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .main {
+    padding: 20px 0 32px;
+  }
+
+  .welcomeSection {
+    margin-bottom: 20px;
+  }
+
+  .welcomeTitle {
+    font-size: 22px;
+  }
+
+  .welcomeSubtitle {
+    font-size: 14px;
+  }
+
+  .statsOverview,
+  .organizedSection,
+  .registrationsSection,
+  .fixturesSection {
+    padding: 18px;
+  }
+
+  .sectionTitle {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .statsCards {
+    gap: 12px;
+  }
+
+  .statCard {
+    padding: 18px;
+  }
+
+  .statValue {
+    font-size: 26px;
+  }
+
+  .cardList {
+    gap: 12px;
+  }
+
+  .cardItem {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .cardTitle {
+    font-size: 14.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .main {
+    padding: 40px 0;
+  }
+
+  .welcomeSection {
+    margin-bottom: 40px;
+  }
+
+  .welcomeTitle {
+    font-size: 36px;
+  }
+
+  .welcomeSubtitle {
+    font-size: 18px;
+  }
+
+  .dashboardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .statsOverview,
+  .organizedSection,
+  .registrationsSection,
+  .fixturesSection {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .statsCards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .statCard {
+    padding: 24px;
+    border-radius: 12px;
+  }
+
+  .statValue {
+    font-size: 32px;
+  }
+
+  .cardList {
+    gap: 12px;
+  }
+
+  .cardItem {
+    padding: 16px;
+    gap: 12px;
+    border-radius: 12px;
+  }
+
+  .cardTitle {
+    font-size: 15px;
+  }
+
+  .cardMeta {
+    font-size: 12px;
+  }
+
+  .badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .leaveBtn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+
+  .linkBtn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+}

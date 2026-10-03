@@ -1,0 +1,135 @@
+﻿.page {
+  min-height: 100vh;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.main {
+  padding: 24px 0 48px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.table thead th {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted-text);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.row:last-child td {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: rgba(74, 222, 128, 0.05);
+}
+
+.posCol {
+  width: 96px;
+}
+
+.statCol {
+  width: 88px;
+  text-align: center;
+}
+
+.statCell {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.posCell {
+  font-variant-numeric: tabular-nums;
+}
+
+.rankBadge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  color: var(--accent-green);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.playerLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.playerLink:hover .displayName {
+  color: var(--accent-green);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.playerNames {
+  display: flex;
+  flex-direction: column;
+}
+
+.displayName {
+  font-weight: 600;
+}
+
+.username {
+  font-size: 12px;
+  color: var(--muted-text);
+}
+
+.pointsCell {
+  text-align: center;
+  font-weight: 700;
+  color: var(--accent-green);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .main {
+    padding: 40px 0 64px;
+  }
+
+  .table {
+    font-size: 15px;
+  }
+}

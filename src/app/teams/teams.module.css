@@ -1,0 +1,113 @@
+.page {
+  /* Page styling handled by AuthenticatedLayout */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+.createLink {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-green);
+  border-radius: 0.5rem;
+  color: var(--primary-bg);
+  font-weight: 600;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.createLink:hover {
+  background: var(--accent-green);
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+
+.createLink:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 2px;
+}
+
+.summary {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--muted-text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 1.25rem;
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.cardBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted-text);
+}
+
+.badgeGame {
+  border-color: var(--primary-green);
+  color: var(--accent-green);
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.cardText {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted-text);
+}
+
+.cardMeta {
+  font-size: 0.8125rem;
+  color: var(--muted-text);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .main {
+    padding: 40px 0 64px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
